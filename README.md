@@ -27,13 +27,13 @@ object domain {
 object use {
   import domain._
 
-  Foo("foo").toJson              // """{"s":"foo"}"""
-  Faz(Some("meh")).toJson        // """{"o":"meh"}"""
-  Faz(None).toJson               // """{}"""
+  Foo("foo").toJson                // """{"s":"foo"}"""
+  Faz(Some("meh")).toJson          // """{"o":"meh"}"""
+  Faz(None).toJson                 // """{}"""
   (Foo("foo"): SimpleTrait).toJson // """{"type":"Foo","s":"foo"}"""
   (Bar(): SimpleTrait).toJson      // """{"type":"Bar"}"""
   (Baz: SimpleTrait).toJson        // """{"type":"Baz"}"""
-  (Faz(None): SimpleTrait).toJson       // """{"type":"Fuzz"}"""
+  (Faz(None): SimpleTrait).toJson  // """{"type":"Faz"}"""
 }
 ```
 
