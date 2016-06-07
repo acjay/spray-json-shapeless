@@ -365,7 +365,7 @@ trait JsonFormatHints {
   case object JsNullNotNone extends JsNullBehaviour
   /** No values serialising to `JsNull` will be included in the wire format. Ambiguous. */
   case object NeverJsNull extends JsNullBehaviour
-  /** Same as AlwaysJsNull when serialzing, with missing values treated as optional upon deserialization. Ambiguous. */
+  /** Same as AlwaysJsNull when serialising, with missing values treated as optional upon deserialisation. Ambiguous. */
   case object AlwaysJsNullTolerateAbsent extends JsNullBehaviour
 
   trait ProductHint[T] {
